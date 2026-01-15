@@ -74,6 +74,7 @@ int main()
     printf("PIB: %f bilhoes de reais\n", _pib2);
     printf("Numero de Pontos Turisticos: %d\n", _pturisticos2);
 
+    //Aguarda um <enter> para finalizar
     getchar();
     getchar();
 
