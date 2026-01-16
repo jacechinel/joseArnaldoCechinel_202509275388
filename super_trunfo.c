@@ -6,7 +6,7 @@ int main()
     char _estado1, _estado2;
     char _codCarta1[5], _codCarta2[5], _cidade1[20], _cidade2[20];
     int _populacao1, _pturisticos1, _populacao2, _pturisticos2;
-    float _area1, _pib1, _area2, _pib2;
+    float _area1, _pib1, _area2, _pib2, _denspop1, _pibpercapta1, _denspop2, _pibpercapta2;
 
     //Recebendo os dados da Carta 1
     printf("Digite os dados para a carta 1\n\n"); //Usando os dois \n aumenta o espaço e melhora a visualizacao
@@ -50,6 +50,14 @@ int main()
     // e a impressao deles.
     printf("\n\n");
 
+    //Calcula Densidade populacional e PIB Per Capta para ambas as Cartas
+
+    _denspop1 = _populacao1 / _area1;
+    _denspop2 = _populacao2 / _area2;
+
+    _pibpercapta1 = _pib1 / _populacao1;
+    _pibpercapta2 = _pib2 / _populacao2;
+    
     //Imprimindo as informacoes da carta 1
     printf("Carta 1:\n");
     printf("Estado: %c\n", _estado1);
@@ -59,7 +67,9 @@ int main()
     printf("Area: %f Km\n", _area1);
     printf("PIB: %f bilhoes de reais\n", _pib1);
     printf("Numero de Pontos Turisticos: %d\n", _pturisticos1);
-
+    printf("Densidade Populacional: %.2f hab/km2\n", _denspop1);
+    printf("PIB per Capita: %.2f reais\n", _pibpercapta1);
+    
     //Cria um espaco entre as informacoes
     // das cidades.
     printf("\n\n");
@@ -73,6 +83,8 @@ int main()
     printf("Area: %f Km\n", _area2);
     printf("PIB: %f bilhoes de reais\n", _pib2);
     printf("Numero de Pontos Turisticos: %d\n", _pturisticos2);
+    printf("Densidade Populacional: %.2f hab/km2\n", _denspop2);
+    printf("PIB per Capita: %.2f reais\n", _pibpercapta2);
 
     //Aguarda um <enter> para finalizar
     getchar();
